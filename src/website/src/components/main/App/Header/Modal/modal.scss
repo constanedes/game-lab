@@ -1,0 +1,30 @@
+.modal-content{
+    background-color: #d5238b9c!important;
+    color: white!important;
+
+}
+
+.modal-header{
+    background-color: #782C969c!important;
+    color: white!important;
+    
+}
+.modal-footer{
+    background-color: #01b7c59c!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between!important;
+    flex-wrap: nowrap!important;
+}
+.btn-close{
+    color: white!important;
+    background-color: white!important;
+}
+
+.btn-close:hover{
+    color: #01b7c5;
+}
+
+.btn-secondary{
+    background: linear-gradient(-45deg, #01b7c5, #782C96, #43465e, #d5238b);
+}

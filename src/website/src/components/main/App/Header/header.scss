@@ -1,0 +1,32 @@
+.main-header{
+    background-color: #393D5E;
+}
+  
+.btn-header{
+    margin-right: 20px!important;
+    color: white!important;
+}
+
+.btn-primary{
+    background: rgba(31, 66, 250, 0.26)!important;
+    background-blend-mode: overlay!important;
+
+}
+
+.btn-primary:hover{
+    background: linear-gradient(-45deg, #01b7c5, #782C96, #d5238b)!important;
+    border: 1px solid #fff!important;
+}
+
+.nav-back {
+    background: linear-gradient(-45deg, #01b7c5, #782C96, #43465e, #d5238b);
+    background-size: 100% 100%;
+    animation: gradient 1s ease infinite;
+    height: 7px;
+    height: 7px;
+    width: 100%;
+    position: absolute;
+    top: 75px;
+    z-index: 1001;
+}
+

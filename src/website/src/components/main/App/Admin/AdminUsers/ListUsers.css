@@ -1,0 +1,22 @@
+.admin-panel {
+    width: 60vw;
+    background: burlywood;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.top-admin {
+    padding: 5px;
+    margin-bottom: 20px;
+    background: antiquewhite;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.list-users {
+    height: 220px;
+    overflow: auto;
+}
+
+/*# sourceMappingURL=ListUsers.css.map */

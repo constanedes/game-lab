@@ -1,0 +1,32 @@
+.modal-content {
+  background-color: rgba(213, 35, 139, 0.6117647059) !important;
+  color: white !important;
+}
+
+.modal-header {
+  background-color: rgba(120, 44, 150, 0.6117647059) !important;
+  color: white !important;
+}
+
+.modal-footer {
+  background-color: rgba(1, 183, 197, 0.6117647059) !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+}
+
+.btn-close {
+  color: white !important;
+  background-color: white !important;
+}
+
+.btn-close:hover {
+  color: #01b7c5;
+}
+
+.btn-secondary {
+  background: linear-gradient(-45deg, #01b7c5, #782C96, #43465e, #d5238b);
+}
+
+/*# sourceMappingURL=modal.css.map */

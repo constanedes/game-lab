@@ -1,0 +1,32 @@
+.profile-picture {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: 3px solid rgb(24, 160, 179);
+}
+
+.card-profile {
+  display: flex;
+  background: rgba(0, 0, 0, 0.4235294118) !important;
+  box-shadow: 3px 3px 3px #333;
+  flex-direction: row;
+  width: 40vw;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 1em;
+  justify-content: space-between;
+}
+
+.star {
+  font-size: 1.4em;
+  line-height: 1.8;
+  color: #c3a816;
+}
+
+.user-rank {
+  font-size: 25px;
+  line-height: 1.8;
+}
+
+/*# sourceMappingURL=UserPlayer.css.map */

@@ -1,0 +1,132 @@
+# REST CLIENT Visual Studio Code Extension
+@hostname = http://localhost
+@port = 8000
+@prefix = /api/v1
+@api = {{hostname}}:{{port}}{{prefix}}
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjY2ODE0MDk0LCJleHAiOjE2NjgxMTAwOTR9.rxgDJRqF2Lz5h8UE_buqWRvqWDV6Lmxj1zB3U3j9CyI
+
+
+#  ====== COMMON ROUTES ======
+### "root" route
+GET {{api}} HTTP/1.1
+
+### API Health
+GET {{api}}/health 
+
+### Creators 
+GET {{api}}/creators 
+
+
+#  ====== AUTH ROUTES ======
+### User Sign Up
+POST {{hostname}}:{{port}}/signup 
+Content-Type: application/json
+
+{
+    "password": "pass",
+    "email": "testing@gamelab.co2",
+    "username": "testi2ng"
+}
+
+### User Login
+POST {{hostname}}:{{port}}/login 
+Content-Type: application/json
+
+{
+    "password": "admin",
+    "email": "admin@gamelab.com"
+}
+
+
+# ====== USER ROUTES ====== 
+### Get all users
+GET  {{api}}/users 
+
+### Get user by id
+GET  {{api}}/users/1
+
+### Get user by username
+GET  {{api}}/users/name/testing
+
+### Get users ranking
+GET  {{api}}/users/ranking
+
+### Get an history of user's matches
+GET  {{api}}/users/2/matches
+
+### Get a recount of user's games
+GET  {{api}}/users/1/games
+
+### Update user
+PUT {{api}}/users/update/1
+Content-Type: application/json
+
+{
+    "about": "lorem ipsum dolor sit amet...",
+    "image": "https://robohash.org/gamelab",
+    "points": 250
+}
+
+### Delete user
+DELETE {{api}}/users/delete/14
+Authorization: {{token}}
+
+
+# ====== GAME ROUTES ======
+### Get all games
+GET  {{api}}/games
+
+### Get game by id
+GET {{api}}/games/1
+
+### Get most popular games
+GET {{api}}/games/popular
+
+### Get random game
+GET {{api}}/games/random
+
+### Create game 
+POST {{api}}/games/create
+Content-Type: application/json
+
+{
+    "name": "Minesweeper",
+    "description": "Try to not explode",
+    "image": "https://robohash.org/minesweeper"
+}
+
+### Update game
+PUT {{api}}/games/update/1
+
+### Delete a game
+DELETE {{api}}/games/delete/2
+
+
+# ====== MATCH ROUTES ====== 
+### Get all matches
+GET {{api}}/matches
+
+### Inspect match by id
+GET {{api}}/matches/inspect/cl9mv2f020000g1tw0n8rak6m
+
+### Get the latest match
+GET {{api}}/matches/latest
+
+### Create match
+POST {{api}}/matches/create
+Content-Type: application/json
+
+{
+    "gameId": 2,
+    "userId": 2,
+    "winner": "Undecided",
+    "finishedAt": "2024-10-01T00:00:00.000Z"
+}
+
+### Delete all matches
+DELETE {{api}}/matches/clear
+
+
+
+
+

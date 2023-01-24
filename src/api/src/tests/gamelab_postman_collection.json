@@ -1,0 +1,367 @@
+{
+    "info": {
+        "_postman_id": "7c4f9942-12da-4d3e-b15c-60ad54eaccae",
+        "name": "New API Test",
+        "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests a user can send?",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "22628909"
+    },
+    "item": [
+        {
+            "name": "Common",
+            "item": [
+                {
+                    "name": "Root",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Health",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/health",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "health"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Creators",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/creators",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "creators"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Create User",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"password\": \"password\",\r\n    \"email\": \"test@gamelab.com\",\r\n    \"username\": \"testing\",\r\n    \"about\": \"About the user 1\",\r\n    \"image\": \"https://robohash.org/test_user\",\r\n    \"points\": 100,\r\n    \"role\": \"USER\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/signup",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["signup"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Login User",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"content\": \"test\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": ""
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "item": [
+                {
+                    "name": "All Users",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/users",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update User",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"about\": \"lorem ipsum dolor sit amesdsdsdt...\",\r\n    \"image\": \"https://robohash.org/gamelab\",\r\n    \"points\": 250\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/users/update/:id",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "users", "update", ":id"],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": null
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "User By Username",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/users/name/:username",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "users", "name", ":username"],
+                            "variable": [
+                                {
+                                    "key": "username",
+                                    "value": null,
+                                    "description": "Username of the registered player"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "User By ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/users/:id",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "users", ":id"],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "User ID for search"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/users/delete/:id",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "users", "delete", ":id"],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "43213213",
+                                    "description": "User ID for delete"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "All by Ranking",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/users/ranking",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "users", "ranking"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Game",
+            "item": [
+                {
+                    "name": "All Games",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/games",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "games"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Game By ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/games/:id",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "games", ":id"],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "Game ID"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Game",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/games/sadsd",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "games", "sadsd"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Game",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"name\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/games/random",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "games", "random"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Match",
+            "item": [
+                {
+                    "name": "All Matches",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{localhost}}:{{port}}/{{path}}/matches",
+                            "host": ["{{localhost}}"],
+                            "port": "{{port}}",
+                            "path": ["{{path}}", "matches"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    "pm.test(\"Succesful request\", function () {",
+                    "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202, 204, 418]);",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "localhost",
+            "value": "http://localhost",
+            "type": "string"
+        },
+        {
+            "key": "port",
+            "value": "8000",
+            "type": "string"
+        },
+        {
+            "key": "path",
+            "value": "api/v1",
+            "type": "string"
+        }
+    ]
+}

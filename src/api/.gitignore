@@ -1,0 +1,5 @@
+.env
+ngrok.exe
+index.html
+node_modules/
+build/**/*

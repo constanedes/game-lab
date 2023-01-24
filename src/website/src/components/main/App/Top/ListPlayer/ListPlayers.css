@@ -1,0 +1,25 @@
+/* .list-players {
+} */
+.leaderboard {
+  width: 50%;
+  background: rgba(0, 0, 0, 0.4235294118) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  color: white;
+  border-radius: 15px;
+}
+
+.top-header {
+  height: 100px;
+  font-size: 48px;
+  background: rgba(0, 0, 0, 0.4235294118) !important;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/*# sourceMappingURL=ListPlayers.css.map */

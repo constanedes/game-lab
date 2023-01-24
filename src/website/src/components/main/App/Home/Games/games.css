@@ -1,0 +1,30 @@
+.main-container-games {
+  background: radial-gradient(60% 106% at 34.94% 108.33%, #F7CBFD 0%, #7758D1 100%) !important;
+}
+
+.card {
+  background: transparent !important;
+  border-color: #7758D1 !important;
+}
+
+.card-body {
+  background: rgba(0, 0, 0, 0.4235294118) !important;
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+.btn-primary {
+  background: rgba(31, 66, 250, 0.26) !important;
+  background-blend-mode: overlay !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(-45deg, #01b7c5, #782C96, #d5238b) !important;
+  border: 1px solid #fff !important;
+}
+
+.card-title.h5 {
+  color: white;
+}
+
+/*# sourceMappingURL=games.css.map */

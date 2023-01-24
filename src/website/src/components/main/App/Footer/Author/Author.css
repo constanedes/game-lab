@@ -1,0 +1,32 @@
+.author img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.author a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+
+
+.author {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+    
+    font-weight: bolder;
+}
+
+.autores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: linear-gradient(-45deg, #01b7c5, #782C96, #43465e, #d5238b);
+    height: 150px;
+    align-items: center;
+}
